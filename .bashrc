@@ -17,6 +17,8 @@ export PATH
 
 # Additional PATHs
 export PATH=$PATH:/usr/include/curl/
+export PATH=$PATH:/home/gwang/.spicetify
+export PATH=$PATH:~/.spicetify
 
 
 # Default Man Pages to use nvim
@@ -47,6 +49,7 @@ alias nv='nvim'
 alias detach='tmux detach'
 alias neofetch='fastfetch'
 alias attach='tmux attach-session -t Main'
+alias config='/usr/bin/git --git-dir=/home/gwang/.cfg/ --work-tree=/home/gwang'
 
 # Custom Funtions
 mkcd() {
@@ -85,6 +88,3 @@ unset rc
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export PATH=$PATH:/home/gwang/.spicetify
-export PATH=$PATH:~/.spicetify
-alias config='/usr/bin/git --git-dir=/home/gwang/.cfg/ --work-tree=/home/gwang'
