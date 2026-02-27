@@ -1,36 +1,36 @@
 ## My Dotfiles:
 *Made by: Gsnail157*
 
-<img src="https://github.com/Gsnail157/Dotfiles/blob/main/wallpapers/Pictures/wallpapers/fullscreen.png"><br>
+I've configured my dotfiles to be stored and managed only using git. Inspiration from this [article](https://www.atlassian.com/git/tutorials/dotfiles) and credit to whoever wrote it. The configurations for each OS will have their own branch so clone accordingly. The `main` branch will just have some of the basic config files for shells, terminal editors, etc that are not system dependent.
 
-## Info:
-- Config specifically made for arch
-- Recommended to use `stow` cli tool. 
+## Installation on a new system
 
-## Installation:
-1. Clone repository into your home directory.\
-    
+## Step 1: 
+Set alias in `.bashrc` or `.zshrc`
 ```
-git clone https://github.com/Gsnail157/dotfiles.git 
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+echo ".cfg" >> .gitignore
+```
+## Step 2:
+clone specific repo with specific branch
+```
+git clone --bare https://github.com/Gsnail157/dotfiles.git -b <BRANCH_NAME> $HOME/.cfg
+```
+## Step 3:
+Define alias in current shell scope
+```
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+```
+## Step 4:
+checkout
+```
+config checkout
+```
+You may recieve error messages to overwrite existing config files but you should create backups and remove the existing ones.
+## Step 5:
+Untrack files that do not need to be `git add`ed. This will prevent `config status` from showing all the files that are not tracked.
+```
+config config --local status.showUntrackedFiles no
 ```
 
-2. `cd` into the cloned repository. 
-3. Use the start up script to download all dependencies and `stow` dotfiles.
-```
-chmod +x startup.sh
-./startup.sh
-```
-
-## Configuration:
-Shell: Zsh <br>
-zsh Plugins: <br>
-Oh-my-zsh<br>
-zsh-autocomplete<br>
-Terminal: Alacritty<br>
-Menu: Rofi<br>
-WM: i3<br>
-Status Bar: PolyBar<br>
-Compositor: Picom
-
-## Considerations
- May consider switching to using kitty for my terminal for native image support
+I've also added a folder for wallpapers that I think are cool
