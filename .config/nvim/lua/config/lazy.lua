@@ -41,6 +41,12 @@ require("lazy").setup({
             require("kanagawa").load("wave")
         end,
     },
+    
+    -- Status Bar at the bottom
+    {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
 
     -- using Hex codes will show the actual color in the buffer
     { "catgoose/nvim-colorizer.lua", opts = { events = "BufReadPre" }},
@@ -70,6 +76,20 @@ require("lazy").setup({
             fuzzy = { implementation = "prefer_rust_with_warning" }
             },
             opts_extend = { "sources.default" }
+    },
+
+    -- Easier way to download and manage LSP on ur system. I dont want to manually download lsps
+    {
+    "mason-org/mason.nvim",
+    opts = {
+        ui = {
+            icons = {
+                package_installed = "✓",
+                package_pending = "➜",
+                package_uninstalled = "✗"
+                }
+            }
+        }
     }
 
     -- Easy way to download and manage LSPs to use instead of downloading them manually 

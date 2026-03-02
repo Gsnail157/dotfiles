@@ -50,6 +50,7 @@ alias detach='tmux detach'
 alias neofetch='fastfetch'
 alias attach='tmux attach-session -t Main'
 alias config='/usr/bin/git --git-dir=/home/gwang/.cfg/ --work-tree=/home/gwang'
+alias ..='cd ..'
 
 # Custom Funtions
 mkcd() {

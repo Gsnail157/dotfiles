@@ -7,3 +7,9 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#AAFF00", bold = true })
 -- / Searching highlighting
 vim.cmd("highlight Search guifg=Black guibg=Green")
 vim.cmd("highlight IncSearch guifg=Green guibg=Cyan")
+
+-- Lualine
+require('lualine').setup{
+    options = {
+        theme = 'gruvbox-material'
+    }}

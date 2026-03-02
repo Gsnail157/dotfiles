@@ -10,7 +10,7 @@ vim.opt.softtabstop = 4
 
 -- Other Useful Options
 vim.opt.termguicolors = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
@@ -18,4 +18,5 @@ vim.opt.mouse = "a"
 vim.opt.writebackup = false
 vim.opt.updatetime = 1000
 vim.opt.smartindent = true
+vim.opt.autoindent = true 
 vim.opt.cursorline = true
