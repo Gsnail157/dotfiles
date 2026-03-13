@@ -1,0 +1,11 @@
+[user]
+	name = Gary
+	email = GaryWG.0120@gmail.com
+[core]
+	editor = nvim
+[alias]
+    a = add
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
