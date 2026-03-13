@@ -26,20 +26,18 @@ bindkey -M menuselect '\r' .accept-line
 
 plugins=(git)
 
-# Example aliases
+# aliases
+alias ani="ani-cli"
 alias nv="nvim"
-alias zshconfig="nv ~/.zshrc"
-alias nvimconfig="nv ~/.config/nvim/lua/settings"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias c="clear"
-alias anime="ani-cli --rofi"
-alias tmuxconfig="nv ~/.config/tmux/tmux.conf"
-alias manga='mangodl'
+alias ..="cd .."
 alias ls="ls -l"
 alias quit="exit"
 # alias ls="exa --icons"
 # alias ll="exa --icons -l"
 # alias tree="exa --tree --level=2"
-# #
+#
 # Copy over Term info
 # Copy if user is using kitty to ssh to remote server
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
