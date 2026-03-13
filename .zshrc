@@ -3,7 +3,9 @@
 if [ -z "${DISPLAY}" ] && [ $(tty) = /dev/tty1 ]; then
   exec startx
 fi
-$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# zsh-autocomplete was installed via homebew so its different
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh # If you come from bash you might have to change your $PATH. export PATH=$HOME/bin:/usr/local/bin:$PATH export PATH=$PATH:~/Scripts/ source ~/.bashrc source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 () {
    local -a prefix=( '\e'{\[,O} )
@@ -26,7 +28,10 @@ bindkey -M menuselect '\r' .accept-line
 
 plugins=(git)
 
+EZA_CONFIG_DIR=/Users/gsnail/.config/eza/
+
 # aliases
+alias ll='eza --oneline -l --icons --no-symlinks --group-directories-last --smart-group -F --color-scale-mode=gradient --bytes --header --git --git-repos-no-status --time-style='+%Y-%m-%d %I:%M %P' --no-user'
 alias ani="ani-cli"
 alias nv="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -56,3 +61,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+ff() {
+  local file
+  file=$(fzf) && nvim "$file"
+}
