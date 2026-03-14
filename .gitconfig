@@ -1,0 +1,13 @@
+[user]
+	email = GaryWG.0120@gmail.com
+	name = Gsnail157
+[core]
+	editor = nvim
+[alias]
+    a = add
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    hist = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+

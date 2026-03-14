@@ -48,7 +48,7 @@ alias ls='ls -lh --color'
 alias nv='nvim'
 alias detach='tmux detach'
 alias neofetch='fastfetch'
-alias attach='tmux attach-session -t Main'
+alias aa='tmux attach-session -t Main'
 alias config='/usr/bin/git --git-dir=/home/gwang/.cfg/ --work-tree=/home/gwang'
 alias ..='cd ..'
 
@@ -69,7 +69,7 @@ fcd() {
     --preview '~/Repos/.fzf/bin/fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}') && cd "$(dirname "$file")"
 }
 
-fnv() {
+ff() {
   local files
   files=$(fzf --style default \
     --preview '~/Repos/.fzf/bin/fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}') && nvim $files

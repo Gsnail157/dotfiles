@@ -1,1 +1,1 @@
-# dotfiles for my fedora desktop
+# Dotfiles for fedora 43 Workstation

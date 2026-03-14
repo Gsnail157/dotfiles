@@ -77,8 +77,7 @@ require("lazy").setup({
             },
             opts_extend = { "sources.default" }
     },
-
-    -- Easier way to download and manage LSP on ur system. I dont want to manually download lsps
+        -- Easier way to download and manage LSP on ur system. I dont want to manually download lsps
     {
     "mason-org/mason.nvim",
     opts = {
@@ -90,7 +89,10 @@ require("lazy").setup({
                 }
             }
         }
-    }
+    },
+
+    -- Buffer integration for git. https://github.com/lewis6991/gitsigns.nvim
+    { 'lewis6991/gitsigns.nvim' }
 
     -- Easy way to download and manage LSPs to use instead of downloading them manually 
     -- Still have the make a new config lua file in lsp folder and copy the default settings from lspconfig github repo
