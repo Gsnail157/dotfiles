@@ -1,11 +1,6 @@
 set guioptions "" #hides the bottom status bar
-set first-page-column 1:1 #for right-to-left documents (e.g. managa)
+set page-right-to-left true
 set adjust-open "best-fit" # open doc in fit-width mode by default
 set pages-per-row 1 # one page per row by default
 set zoom-min 10
 set smooth-scroll "true"
-
-set recolor-lightcolor "rgba(0, 0, 0, 0)"
-set recolor-darkcolor "rgba(255, 255, 255, 1)"
-map i recolor
-set recolor true

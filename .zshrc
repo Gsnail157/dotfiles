@@ -1,4 +1,15 @@
 # .zshrc Config File
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="apple"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 if [ -z "${DISPLAY}" ] && [ $(tty) = /dev/tty1 ]; then
   exec startx
@@ -20,8 +31,6 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 }
 bindkey '^R' .history-incremental-search-backward
 bindkey '^S' .history-incremental-search-forward
-
-source "$HOME/.zsh/spaceship/spaceship.zsh"
 
 bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
