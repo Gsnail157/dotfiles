@@ -31,13 +31,12 @@ plugins=(git)
 EZA_CONFIG_DIR=/Users/gsnail/.config/eza/
 
 # aliases
-alias ll='eza --oneline -l --icons --no-symlinks --group-directories-last --smart-group -F --color-scale-mode=gradient --bytes --header --git --git-repos-no-status --time-style='+%Y-%m-%d %I:%M %P' --no-user'
+alias ls='eza --oneline -l --icons --no-symlinks --group-directories-last --smart-group -F --color-scale-mode=gradient --bytes --header --git --git-repos-no-status --time-style='+%Y-%m-%d %I:%M %P' --no-user'
 alias ani="ani-cli"
 alias nv="nvim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias c="clear"
 alias ..="cd .."
-alias ls="ls -l"
 alias quit="exit"
 # alias ls="exa --icons"
 # alias ll="exa --icons -l"
